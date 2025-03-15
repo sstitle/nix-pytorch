@@ -20,7 +20,7 @@
 
       apps.default = flake-utils.lib.mkApp {
         drv = pkgs.writeShellScriptBin "run-main" ''
-          ${pkgs.uv}/bin/uv run main.py
+          ${pkgs.uv}/bin/uv run main.py "$@"
         '';
       };
     });
